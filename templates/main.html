@@ -1,0 +1,372 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Marks Predictor</title>
+    <!-- Favicons -->
+  <link href="static/img/icon3.png" rel="icon">
+  <!--<link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <div style="margin-right: 10px;"><img height="40" width="50"  src="static/img/icon3.png" style="position:relative;"></div>
+      <h1 class="logo mr-auto"><a href="{{ url_for('student_features_entry') }}">Enter Student Details<span>. </span>3rd Sem<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}">Team</a></li>
+          <li><a href="{{ url_for('index') }}">Technologies</a></li>
+          <li><a href="{{ url_for('index') }}">Contact</a></li>
+          <li><a href="{{ url_for('options') }}">Result</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+        <!-- ======= Form Starts from here ======= action="/student_features_entry" method="post"-->
+
+            <section id="team" class="featured-services">
+                <form action="/student_features_entry" method="POST">
+                    <div class="container" data-aos="fade-up">
+
+                    <!-- Student Name Row -->
+                    <div class="row mt-5">
+                      <div class="col-sm-12 align-items-stretch mt-5">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="Student_Name">Student Name:</label>
+                            <input id="Student_Name" type="text" pattern="^[a-zA-Z]+$" class="form-control" name="Student_Name" placeholder="Enter Student Name" required>
+                        </div>
+                      </div>
+
+                    </div> <!-- Student Name row closed -->
+
+
+                    <!-- First Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="sex">Sex:</label>
+                            <select class="browser-default custom-select" id="sex" name="sex" required>
+                              <option value="">Select menu</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="age">Age:</label><br>
+                            <input id="age" type="number" class="form-control" name="age" placeholder="Enter Age" min="19" max="25" required>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="motherjob">Mother's Occupation:</label>
+                            <select class="browser-default custom-select" id="motherjob" name="motherjob" required>
+                              <option value="">Select menu</option>
+                              <option value="at_home">At Home</option>
+                              <option value="health">Health</option>
+                              <option value="teacher">Teacher</option>
+                              <option value="services">Services</option>
+                              <option value="other">Other</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div> <!-- First row closed -->
+
+
+                   <!-- Second Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="fatherjob">Father's Occupation:</label>
+                            <select class="browser-default custom-select" id="fatherjob" name="fatherjob" required>
+                              <option value="">Select menu</option>
+                              <option value="at_home">At Home</option>
+                              <option value="health">Health</option>
+                              <option value="teacher">Teacher</option>
+                              <option value="services">Services</option>
+                              <option value="other">Other</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="travel">Travel Time:</label><br>
+                            <input id="travel" type="number" class="form-control" name="travel" placeholder="Enter Travel Time (in minutes)" min="0" max="180"required>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="hosteller">Hosteller:</label>
+                            <select class="browser-default custom-select" id="hosteller" name="hosteller" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div> <!-- Second row closed -->
+
+
+
+                    <!-- Third Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="studytime">Study Time:</label>
+                          <input id="studytime" type="number" class="form-control" name="studytime" placeholder="Enter Study time (in hours)" min="0" max="24" required>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="subjectfailed">Subject Failed:</label><br>
+                            <input id="subjectfailed" type="number" class="form-control" name="subjectfailed" placeholder="Enter Subjects Failed" min="0" max="4" required>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="educationsupport">Education Support:</label>
+                            <select class="browser-default custom-select" id="educationsupport" name="educationsupport" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div> <!-- Third row closed -->
+
+
+
+                    <!-- Fourth Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="extrapaid">Extra Paid:</label>
+                            <select class="browser-default custom-select" id="extrapaid" name="extrapaid" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="extracurricular">Extracurricular:</label><br>
+                            <select class="browser-default custom-select" id="extracurricular" name="extracurricular" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="highereducation">Higher Education:</label>
+                            <select class="browser-default custom-select" id="highereducation" name="highereducation" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div> <!-- Fourth row closed -->
+
+
+
+                    <!-- Fifth Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="internet">Internet:</label>
+                            <select class="browser-default custom-select" id="internet" name="internet" required>
+                              <option value="">Select menu</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="freetime">Free Time:</label><br>
+                            <select class="browser-default custom-select" id="freetime" name="freetime" required>
+                              <option value="">Select menu (in hours)</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="goingout">Going out:</label>
+                            <select class="browser-default custom-select" id="goingout" name="goingout" required>
+                              <option value="">Select menu (in hours)</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div> <!-- Fifth row closed -->
+
+
+                    <!-- Sixth Row -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="health">Health:</label>
+                            <select class="browser-default custom-select" id="health" name="health" required>
+                              <option value="">Select menu</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="tenth_score">Tenth Score:</label><br>
+                            <input id="tenth_score" type="number" class="form-control" name="tenth_score" placeholder="Tenth Score (%)" min="35" max="100" step="any" required>
+                        </div>
+                      </div>
+
+
+
+                        <div class="col-sm-4 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="pu_score">PU Score:</label>
+                            <input id="pu_score" type="number" class="form-control" name="pu_score" placeholder="PU Score (%)" min="35" max="100" step="any" required>
+                        </div>
+                      </div>
+                    </div> <!-- Sixth row closed -->
+
+
+
+                   <!-- Seventh Row -->
+                    <div class="row">
+                      <div class="col-sm-6 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="first_semester">First Semester:</label>
+                            <input id="first_semester" type="number" class="form-control" name="first_semester" placeholder="First Semester (SGPA)" min="3.5" max="10.0" step="any" required>
+                        </div>
+                      </div>
+
+
+                        <div class="col-sm-6 align-items-stretch">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                          <label for="second_semester">Second Semester:</label><br>
+                            <input id="second_semester" type="number" class="form-control" name="second_semester" placeholder="Second Semester (SGPA)" min="3.5" max="10.0" step="any" required>
+                        </div>
+                      </div>
+
+                    </div> <!-- Seventh row closed -->
+
+                    <!-- Prediction Button -->
+                    <div class="row">
+                      <div class="col-sm-4 align-items-stretch">
+
+                      </div>
+
+
+                        <div class="col-sm-4 align-items-stretch mt-5" align="center" >
+                        <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+                          <button class="btn btn-primary">Get prediction</button>
+                        </div>
+                      </div>
+
+                        <div class="col-sm-4 align-items-stretch">
+
+                      </div>
+                    </div> <!-- Prediction Button -->
+
+
+                  </div>
+                </form>
+            </section><!-- End of Form -->
+
+
+
+     <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

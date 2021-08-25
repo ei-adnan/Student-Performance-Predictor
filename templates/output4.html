@@ -1,0 +1,241 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Marks Predictor</title>
+    <!-- Favicons -->
+  <link href="static/img/icon3.png" rel="icon">
+  <!--<link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <div style="margin-right: 10px;"><img height="40" width="50"  src="static/img/icon3.png" style="position:relative;"></div>
+      <h1 class="logo mr-auto"><a href="{{ url_for('index') }}">Student Details<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}">Team</a></li>
+          <li><a href="{{ url_for('index') }}">Technologies</a></li>
+          <li><a href="{{ url_for('index') }}">Contact</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+        <!-- ======= Form Starts from here ======= -->
+
+            <section id="team" class="featured-services">
+                <div class="container" data-aos="fade-up">
+                    <div class="row mt-5">
+                      <div class="col-sm-12 align-items-stretch mt-5">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded form-group" align="center"  data-aos-delay="100">
+                          <label class="font-weight-bold">All Details of Student    <span><a href="{{ url_for('student_features_entry_four') }}">, New Student</a></span></label>
+
+
+
+                            <!-- Name Row start -->
+                            <form action="/output4" method="post">
+                            <div class="row">
+                                <div class="col-sm-12 align-items-stretch mt-5">
+                                    <div class="shadow-lg p-3  bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                                        <label class="font-weight-bold" for="Student_Name_id">Student Name:</label>
+                                        <select class="browser-default custom-select" id="Student_Name_id" name="Student_Name_id" required>
+                                        {% for c in student_names_list %}
+                                        <option value="{{c.Student_Name}}"> {{c.Student_Name}} </option>
+                                        {% endfor %}
+                                        </select>
+
+                                        <button class="btn btn-primary mt-5">Submit</button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            </form>
+                            <!-- Name Row end -->
+
+                            <!-- Row 1 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Sex: {{flatten_list[2]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Age: {{flatten_list[3]}}</label>
+
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Mothers Occupation: {{flatten_list[4]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 1 end -->
+
+                            <!-- Row 2 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Father's Occupation: {{flatten_list[5]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Travel Time: {{flatten_list[6]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Hosteller: {{flatten_list[7]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 2 end -->
+
+
+                            <!-- Row 3 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Study Time: {{flatten_list[8]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Subject Failed: {{flatten_list[9]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Education Support: {{flatten_list[10]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 3 end -->
+
+
+                            <!-- Row 4 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Extra paid: {{flatten_list[11]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Extracurricular: {{flatten_list[12]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Higher Education: {{flatten_list[13]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 4 end -->
+
+
+                            <!-- Row 5 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Internet: {{flatten_list[14]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Free Time: {{flatten_list[15]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Going out: {{flatten_list[16]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 5 end -->
+
+
+                            <!-- Row 6 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Health: {{flatten_list[17]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Tenth Score: {{flatten_list[18]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">PU Score: {{flatten_list[19]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 6 end -->
+
+                            <!-- Row 7 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">First Semester: {{flatten_list[20]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Second Semester: {{flatten_list[21]}}</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="font-weight-bold">Third Semester: {{flatten_list[22]}}</label>
+                                </div>
+                            </div>
+                            <!-- Row 7 end -->
+
+                            <!-- Row 8 start -->
+                            <div class="row mt-5">
+                                <div class="col-sm-12">
+                                    <label class="font-weight-bold" style="font-size: 20px;color: red;">Predicted 4th Semester percentage: {{flatten_list[23]}} <span style="margin-left:8px;">SGPA: ({{ flatten_list[24] }})</span> </label>
+                                </div>
+                            </div>
+                            <!-- Row 8 end -->
+
+
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </section>
+
+
+
+     <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

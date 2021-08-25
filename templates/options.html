@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Marks Predictor</title>
+    <!-- Favicons -->
+  <link href="static/img/icon3.png" rel="icon">
+  <!--<link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <div style="margin-right: 10px;"><img height="40" width="50"  src="static/img/icon3.png" style="position:relative;"></div>
+      <h1 class="logo mr-auto"><a href="{{ url_for('index') }}">MarksPredictor<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}">Team</a></li>
+          <li><a href="{{ url_for('index') }}">Technologies</a></li>
+          <li><a href="{{ url_for('index') }}">Contact</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+        <!-- ======= Form Starts from here ======= -->
+
+            <section id="team" class="featured-services">
+                <div class="container" data-aos="fade-up">
+                    <div class="row mt-5">
+                      <div class="col-sm-12 align-items-stretch mt-5">
+                        <div class="p-3 mb-5 bg-white rounded form-group" align="center"  data-aos-delay="100">
+                          <label class="font-weight-bold" style="font-size: 45px;">Select one predictor</label>
+
+                            <!-- First button Row -->
+                            <div class="row">
+                                <div class="col-sm-6 align-items-stretch mt-5">
+                                    <div class="bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                                        <a href="{{ url_for('output') }}" class="btn btn-primary mt-5" style="padding: 15px 32px;">3rd Semester</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6 align-items-stretch mt-5">
+                                    <div class="bg-white rounded form-group" data-aos="fade-up" data-aos-delay="100">
+                                        <a href="{{ url_for('output4') }}" class="btn btn-primary mt-5" style="padding: 15px 32px;">4th Semester</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- First button Row -->
+
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </section>
+
+
+
+     <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>
